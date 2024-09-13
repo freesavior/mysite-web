@@ -1,0 +1,19 @@
+# Ignorer les fichiers environnementaux sensibles
+.env
+
+# Ignorer les dossiers de dépendances Node.js
+node_modules/
+
+# Ignorer les fichiers de build ou de distribution
+dist/
+build/
+
+# Ignorer les fichiers téléchargés
+upload-folder
+public/uploads/
+
+# Logs
+*.log
+
+# Ignorer des fichiers temporaires et système
+.DS_Store

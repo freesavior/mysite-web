@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "googleapis": "^143.0.0",
+    "node": "^22.7.0",
+    "nodemailer": "^6.9.14",
+    "nodemon": "^3.1.4",
+    "punycode": "^2.3.1"
+  },
+  "name": "mon-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "husky": "^9.1.5"
+  }
+}
