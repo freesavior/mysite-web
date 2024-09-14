@@ -1,32 +1,32 @@
-name: Deploy to GitHub Pages
+name: Deploy to Elastic Beanstalk
 
 on:
   push:
     branches:
-      - main  # Le workflow se déclenche lors d'un push sur `main`
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  
+        node-version: '14'
 
     - name: Install dependencies
       run: npm install
 
-    - name: Build the site (Generate static HTML from EJS)
-      run: npm run build  
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public  
-
+    - name: Deploy to Elastic Beanstalk
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'eu-west-1'
+      run: |
+        zip -r deploy.zip * .[^.]*
+        aws elasticbeanstalk create-application-version --application-name mysite-web --version-label ${{ github.sha }} --source-bundle S3Bucket=elasticbeanstalk-us-east-1-123456789012,S3Key=deploy.zip
+        aws elasticbeanstalk update-environment --environment-name mysite-web-env --version-label ${{ github.sha }}
