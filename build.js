@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 const currentYear = new Date().getFullYear();  // Récupérer l'année actuelle
-const authorName = 'TonNom';  // Remplace par le nom de l'auteur
+const authorName = 'Omar BARAZE';  // Remplace par le nom de l'auteur
 
 const views = [
   { src: 'views/index.ejs', dest: 'public/index.html', data: { isAvailable: true, lang: 'fr', message: 'success', year: currentYear, author: authorName } },
