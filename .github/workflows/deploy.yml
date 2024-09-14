@@ -25,7 +25,7 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'eu-west-1'
+        AWS_REGION: 'us-east-2'
       run: |
         zip -r deploy.zip * .[^.]*
         aws elasticbeanstalk create-application-version --application-name mysite-web --version-label ${{ github.sha }} --source-bundle S3Bucket=elasticbeanstalk-us-east-1-123456789012,S3Key=deploy.zip
