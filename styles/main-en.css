@@ -1,0 +1,438 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+    padding-top: 70px; /* Pour éviter le chevauchement avec la navbar fixe */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #212529;
+    padding: 1rem 0;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+/* Section Titles */
+h1, h2, h3, h4 {
+    color: #343a40;
+    text-align: center; /* Assure que tous les titres sont centrés */
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h4, h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Section Layouts */
+.container-profile, 
+#contact {
+    padding: 3rem 0;
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centre tout le contenu */
+}
+
+#interests .p{
+   color:#f8f9fa;
+}
+
+#Experiences, 
+#Skills, 
+#education, 
+#interests, 
+#projects {
+    padding: 3rem 0;
+    background-color: #343a40; /* Fond sombre pour contraster avec le profil et le contact */
+    color: #ffffff; /* Texte blanc pour contraste */
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    text-align: center; /* Centrage du texte pour toutes les sections */
+}
+
+/* Experience Section */
+#Experiences h3 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+#Experiences .experience-item {
+    background-color: #495057; /* Couleur de fond subtile pour chaque expérience */
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#Experiences img {
+    display: block;
+    margin: 0 auto 1rem auto; /* Centre l'image */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+#Experiences h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #ffc107; /* Couleur dorée pour les titres des expériences */
+}
+
+#Experiences ul {
+    list-style-type: none; /* Suppression des puces */
+    padding-left: 0;
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: left; /* Aligne le texte à gauche dans les listes */
+}
+
+#Experiences ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    text-indent: -1rem;
+    position: relative;
+}
+
+#Experiences ul li:before {
+    content: "•"; /* Ajouter une puce stylisée */
+    color: #ffc107; /* Couleur de la puce */
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1rem;
+}
+
+/* Skills Section */
+#Skills .card, 
+#projects .card {
+    background-color: #495057; /* Fond sombre pour les cartes */
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    color: #ffffff; /* Texte blanc pour contraste */
+}
+
+#Skills .card:hover, 
+#projects .card:hover {
+    transform: translateY(-10px);
+}
+
+#Skills .card-title, 
+#projects .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #ffc107; /* Couleur dorée pour les titres des cartes */
+}
+
+#Skills ul, 
+#projects .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+#Skills .lead {
+    color:#f8f9fa;
+}
+
+/* Profile Section */
+.container-profile img {
+    border: 5px solid #ffc107;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.container-profile h1 {
+    font-size: 2.5rem;
+    color: #6c757d;
+}
+
+.container-profile h2 {
+    font-size: 1.75rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.container-profile .lead {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.container-profile {
+    background-size: cover; /* Ajuste l'image pour couvrir toute la zone */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-color: white;
+}
+
+/* Certifications, Languages, and Education Section */
+#Certifications, #Languages, #education {
+    background-color: #ffffff; /* Fond clair */
+    color: #343a40; /* Texte sombre */
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrage du texte pour ces sections */
+}
+
+#Certifications h3, #Languages h3, #education h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #ffc107; /* Texte en doré */
+}
+
+#Certifications ul, #Languages ul, #education ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.25rem;
+}
+
+#Certifications ul li, #Languages p, #education ul li {
+    margin-bottom: 0.75rem;
+}
+
+/* Interests Section */
+#interests {
+    background-color: #495057; /* Fond sombre */
+    color: #ffffff; /* Texte blanc */
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#interests ul {
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding-left: 0;
+    list-style-type: none;
+    color:black;
+}
+
+#interests p {
+    color: black;
+}
+
+/* Contact Section */
+#contact .card-body {
+    background-color: #495057;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#contact .card-body h3 {
+    color: #ffc107;
+}
+
+#contact .form-control {
+    background-color: #343a40;
+    border: none;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+#contact .form-control:focus {
+    background-color: #343a40;
+    border: none;
+    box-shadow: none;
+}
+
+#contact .btn-submit {
+    background-color: #ffc107;
+    border: none;
+    color: #212529;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#contact .btn-submit:hover {
+    background-color: #e0a800;
+    transform: translateY(-3px);
+}
+
+#contact .btn-submit:active {
+    background-color: #c69500;
+    transform: translateY(0);
+}
+
+/* Fixing Footer and Section Transitions */
+footer {
+    background-color: #212529;
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.container-profile, #contact {
+    background-color: #ffffff;
+    color: #343a40;
+}
+
+#Certifications ul, #Languages p {
+    font-size: 1.25rem;
+    color: #343a40; /* Assure une bonne visibilité */
+    margin-bottom: 1.5rem;
+}
+
+.bullets i {
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+    color: #007bff; /* Couleur des icônes */
+    font-size: 1.5rem; /* Taille des icônes */
+}
+
+/* Pour espacer les icônes des textes */
+ul.list-unstyled i {
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+    font-size: 1.2rem; /* Ajuste la taille de l'icône si nécessaire */
+    color: #007bff; /* Change la couleur de l'icône si nécessaire */
+}
+
+/* Optionnel: Pour ajouter un espacement vertical entre les lignes */
+ul.list-unstyled li {
+    margin-bottom: 15px; /* Espace entre chaque ligne de contact */
+}
+
+/* Style du bouton */
+#downloadButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
+/* Media Queries pour les tablettes */
+@media (max-width: 991px) {
+    /* Réduction des marges et padding pour les tablettes */
+    .container-profile, 
+    #contact, 
+    #Experiences, 
+    #Skills, 
+    #education, 
+    #interests, 
+    #projects {
+        padding: 2rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Ajustement des tailles des titres */
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    h4, h5 {
+        font-size: 1.25rem;
+    }
+
+    .lead, 
+    #Skills ul, 
+    #projects .card-text {
+        font-size: 1rem;
+    }
+
+    /* Réglage des cartes pour qu'elles prennent toute la largeur */
+    .col-lg-4, .col-lg-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+/* Media Queries pour les téléphones */
+@media (max-width: 767px) {
+    /* Réduction supplémentaire des marges et padding pour les téléphones */
+    .container-profile, 
+    #contact, 
+    #Experiences, 
+    #Skills, 
+    #education, 
+    #interests, 
+    #projects {
+        padding: 1.5rem 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Ajustement des tailles des titres */
+    h1, h2, h3 {
+        font-size: 1.25rem;
+    }
+
+    h4, h5 {
+        font-size: 1rem;
+    }
+
+    .lead, 
+    #Skills ul, 
+    #projects .card-text {
+        font-size: 0.875rem;
+    }
+
+    /* Réglage des cartes pour les petits écrans */
+    .col-lg-4, .col-lg-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+.btn-disponible {
+    background-color: blue;
+    color: white;
+
+}
+
+
+
+.btn-indisponible {
+    background-color: red;
+    color: white;
+}
+
+.centered-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Espace autour du bouton */
+    background-color: blue;
+    color: white;
+}
