@@ -1,38 +1,21 @@
-// public/script.js
-
+// Gestion du téléchargement du fichier
 document.getElementById('downloadButton').addEventListener('click', function() {
-    // Rediriger vers la route de téléchargement
-    window.location.href = '/telecharger-le-fichier';
+  // Rediriger vers la route de téléchargement
+  window.location.href = '/telecharger-le-fichier';
 });
 
+// Script pour la gestion du reCAPTCHA
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-// script.js
-
+// Gestion de la disponibilité du bouton
 document.addEventListener("DOMContentLoaded", function () {
-    const dispoButton = document.getElementById("dispo-button");
-  
-    // Par défaut, le bouton est disponible
-    let isAvailable = true;
-  
-    dispoButton.addEventListener("click", function () {
-      if (isAvailable) {
-        dispoButton.textContent = "Indisponible";
-        dispoButton.classList.remove("btn-disponible");
-        dispoButton.classList.add("btn-indisponible");
-      } else {
-        dispoButton.textContent = "Disponible";
-        dispoButton.classList.remove("btn-indisponible");
-        dispoButton.classList.add("btn-disponible");
-      }
-      isAvailable = !isAvailable; // Inverser l'état
-    });
-  });
+  const dispoButton = document.getElementById("dispo-button");
 
+  // Par défaut, le bouton est disponible
+  let isAvailable = true;
 
-  let estDisponible = true;
-  
   dispoButton.addEventListener("click", function () {
-    if (estDisponible) {
+    if (isAvailable) {
       dispoButton.textContent = "Indisponible";
       dispoButton.classList.remove("btn-disponible");
       dispoButton.classList.add("btn-indisponible");
@@ -41,6 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
       dispoButton.classList.remove("btn-indisponible");
       dispoButton.classList.add("btn-disponible");
     }
-    estDisponible = !estDisponible; // Inverser l'état
+    isAvailable = !isAvailable; // Inverser l'état
   });
 });

@@ -8,9 +8,7 @@ node_modules/
 dist/
 build/
 
-# Ignorer les fichiers téléchargés
-upload-folder
-public/uploads/
+
 
 # Logs
 *.log
