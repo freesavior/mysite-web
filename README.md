@@ -29,7 +29,7 @@ makefile
 Copier le code
 web: node index.js
 
-Déploiement automatique avec GitHub Actions
+## Déploiement automatique avec GitHub Actions
 1. Configurer GitHub Secrets
 Dans GitHub, allez dans Settings > Secrets > Actions et ajoutez les secrets suivants :
 
@@ -82,22 +82,23 @@ git add .
 git commit -m "Déploiement initial"
 git push origin main
 
-Configuration du domaine personnalisé (facultatif)
+## Configuration du domaine personnalisé (facultatif)
 Ajoutez votre domaine personnalisé dans Settings > Domains sur Heroku.
 Configurez les DNS chez votre fournisseur de nom de domaine avec les informations fournies par Heroku.
 Activez le SSL pour garantir la sécurité de votre site.
 
-Commandes Heroku utiles
-heroku login : Se connecter à Heroku.
-heroku create : Créer une nouvelle application sur Heroku.
-git push heroku main : Déployer l'application sur Heroku.
-heroku logs --tail : Voir les logs de l'application en direct.
-heroku open : Ouvrir l'application dans le navigateur.
+## Commandes Heroku utiles
+* heroku login : Se connecter à Heroku.
+* heroku create : Créer une nouvelle application sur Heroku.
+* git push heroku main : Déployer l'application sur Heroku.
+* heroku logs --tail : Voir les logs de l'application en direct.
+* heroku open : Ouvrir l'application dans le navigateur.
 
-Technologies utilisées
-Backend : Node.js, Express
-Frontend : HTML, CSS, JavaScript
-Déploiement : Heroku, GitHub Actions
+## Technologies utilisées
+* Backend : Node.js, Express
+* Frontend : HTML, CSS, JavaScript
+* Déploiement : Heroku, GitHub Actions
+
 Auteur
 Omar Baraze - Freelance ingénieur DevOps cloud AWS et développeur junior.
 
