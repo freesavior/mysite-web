@@ -1,4 +1,4 @@
-name: Deploy to Elastic Beanstalk
+name: Deploy to Heroku
 
 on:
   push:
@@ -13,20 +13,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-
     - name: Install dependencies
       run: npm install
 
-    - name: Deploy to Elastic Beanstalk
+    - name: Deploy to Heroku
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'us-east-2'
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
-        zip -r deploy.zip * .[^.]*
-        aws elasticbeanstalk create-application-version --application-name mysite-web --version-label ${{ github.sha }} --source-bundle S3Bucket=elasticbeanstalk-us-east-1-123456789012,S3Key=deploy.zip
-        aws elasticbeanstalk update-environment --environment-name mysite-web-env --version-label ${{ github.sha }}
+        heroku git:remote -a monsite-web
+        git push heroku main
