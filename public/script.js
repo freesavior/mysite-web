@@ -4,8 +4,7 @@ document.getElementById('downloadButton').addEventListener('click', function() {
   window.location.href = '/telecharger-le-fichier';
 });
 
-// Script pour la gestion du reCAPTCHA
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 // Gestion de la disponibilité du bouton
 document.addEventListener("DOMContentLoaded", function () {
