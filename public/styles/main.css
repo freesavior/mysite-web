@@ -443,6 +443,29 @@ ul.list-unstyled li {
 }
 
 
+/* Style bouton fantôme avec contour */
+.btn-language-switch {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.btn-language-switch:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.btn-language-switch:active {
+    transform: translateY(0);
+}
+
+
+
 
 
 
