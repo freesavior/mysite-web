@@ -22,6 +22,19 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.enable('trust proxy');
+
+app.use((req, res, next) => {
+    if (req.secure || req.headers['x-forwarded-proto'] === 'https') {
+      // Si la requête est sécurisée (HTTPS), passer à la prochaine middleware ou route
+      return next();
+    }
+    // Si la requête est en HTTP, rediriger vers la même URL avec HTTPS
+    res.redirect('https://' + req.headers.host + req.url);
+  });
+  
+
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
