@@ -1,5 +1,6 @@
 # Ignorer les fichiers environnementaux sensibles
 .env
+.husky/
 
 # Ignorer les dossiers de dépendances Node.js
 node_modules/
@@ -11,10 +12,16 @@ build/
 
 # Logs
 *.log
+.cache/
 
 # Ignorer des fichiers temporaires et système
 .DS_Store
 
-.upload-folder
+upload-folder/
 
+
+
+# Ignorer les fichiers spécifiques de l'éditeur ou de l'IDE
+.vscode/
+.idea/
 
