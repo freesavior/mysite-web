@@ -15,9 +15,6 @@ build/
 # Ignorer des fichiers temporaires et système
 .DS_Store
 
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
+.upload-folder
 
 
