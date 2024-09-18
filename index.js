@@ -26,13 +26,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.enable('trust proxy');
 
 app.use((req, res, next) => {
+    const allowedHost = process.env.DOMAIN_NAME; // Accès correct à la variable d'environnement
     if (req.secure || req.headers['x-forwarded-proto'] === 'https') {
-      // Si la requête est sécurisée (HTTPS), passer à la prochaine middleware ou route
       return next();
     }
-    // Si la requête est en HTTP, rediriger vers la même URL avec HTTPS
-    res.redirect('https://' + req.headers.host + req.url);
+    // Vérifiez si l'hôte est bien celui attendu
+    if (req.headers.host === allowedHost) {
+      return res.redirect('https://' + allowedHost + req.url);
+    }
+    res.status(400).send('Bad Request');
   });
+
+  
   
 
 const transporter = nodemailer.createTransport({
