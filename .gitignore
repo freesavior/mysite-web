@@ -17,10 +17,6 @@ build/
 # Ignorer des fichiers temporaires et système
 .DS_Store
 
-
-
-
-
 # Ignorer les fichiers spécifiques de l'éditeur ou de l'IDE
 .vscode/
 .idea/
