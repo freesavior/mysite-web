@@ -17,7 +17,7 @@ build/
 # Ignorer des fichiers temporaires et système
 .DS_Store
 
-upload-folder/
+
 
 
 
