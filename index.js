@@ -116,7 +116,7 @@ app.post('/contact', async (req, res) => {
             lang: lang,
             message: 'error',
             anchor: '#contact',
-            formData: formData, // Ensure the form data is passed here too
+            formData: formData, 
             isAvailable
         });
     }
