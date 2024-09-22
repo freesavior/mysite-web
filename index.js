@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import nodemailer from "nodemailer";
 import dotenv from 'dotenv';
-import fetch from 'node-fetch'; // Assurez-vous que le module est installé
+import fetch from 'node-fetch'; 
 
 
 dotenv.config();
@@ -77,7 +77,7 @@ app.post('/contact', async (req, res) => {
     const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaResponse}`;
     const recaptchaVerification = await fetch(verifyUrl, { method: 'POST' }).then(res => res.json());
 
-    // Define formData to use it across the function
+    
     const formData = {
         name: name || '',
         email: email || '',
