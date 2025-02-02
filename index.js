@@ -125,7 +125,7 @@ app.post('/contact', async (req, res) => {
 
 // Routes pour le téléchargement
 app.get('/telecharger-cv-fr', function (req, res) {
-    const file = `${__dirname}/upload-folder/CV-2+.pdf`;
+    const file = `${__dirname}/upload-folder/CV_Omar_Baraze.pdf`;
     res.download(file); // Télécharger la version française du CV.
 });
 
